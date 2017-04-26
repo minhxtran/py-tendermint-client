@@ -1,0 +1,5 @@
+.DS_Store
+*.pyc
+.cache
+dummy.db/
+__pycache__
