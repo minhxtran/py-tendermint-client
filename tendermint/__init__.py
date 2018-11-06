@@ -34,7 +34,7 @@ class Tendermint(object):
         try:
             result = requests.get(endpoint, params=payload)
             return result.json()
-        except:
+        except ValueError as e:
             print('Error parsing response: {}'.format(e))
             return {'error': e.message}
 
