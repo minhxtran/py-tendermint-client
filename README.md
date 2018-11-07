@@ -27,5 +27,5 @@ In another fire up a console
 >>> t = Tendermint()
 >>> t.status()
 >>> t.broadcast_tx_commit('helloworld')
-...
+>>> t.query("", "helloworld", "true") # function requires 3 parameters (path, data, prove)
 ```
