@@ -1,6 +1,7 @@
 # Python Tendermint client (HTTP)
 
 ### Install
+Tendermint version 0.26.0
 Requires Python 3.6
 
 Recommend [PipEnv](http://docs.pipenv.org/en/latest/) for a virtualenv but not required
@@ -13,11 +14,11 @@ pipenv install
 
 ### Try it out
 ```
-In one terminal run the tendermint dummy app
->> dummy
-
-In another terminal run tendermint
+Start the tendermint node
 >> tendermint node
+
+In another terminal run the kvstore app
+>> tendermint node --proxy_app=kvstore
 
 In another fire up a console
 >> python
