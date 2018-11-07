@@ -30,7 +30,7 @@ def convert_args(args):
 class Tendermint(object):
     def __init__(self, host=None):
         if host and not host[-1] == '/': host = host+'/'
-        self.url = host or "http://localhost:46657/"
+        self.url = host or "http://localhost:26657/"
 
     def call(self, name, args=None):
         endpoint = '{}{}'.format(self.url, name)
