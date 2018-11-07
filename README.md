@@ -2,6 +2,7 @@
 
 ### Install
 Tendermint version 0.26.0
+
 Requires Python 3.6
 
 Recommend [PipEnv](http://docs.pipenv.org/en/latest/) for a virtualenv but not required
