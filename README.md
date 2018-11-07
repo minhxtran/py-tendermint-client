@@ -22,7 +22,7 @@ In another terminal run the kvstore app
 >> tendermint node --proxy_app=kvstore
 
 In another fire up a console
->> python
+>> python3
 >>> from tendermint import Tendermint
 >>> t = Tendermint()
 >>> t.status()
