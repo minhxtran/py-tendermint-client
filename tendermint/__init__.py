@@ -12,6 +12,10 @@ def to_hex(value):
     if isinstance(value, bytes):
         return hex_prefix(binascii.hexlify(value))
     if isinstance(value, str):
+        if value == "true" or value == "True":
+            return value.lower()
+        if value == "false" or value == "False":
+            return value.lower()
         return hex_prefix(binascii.hexlify(value.encode('utf-8')))
     if isinstance(value, int):
         return value
