@@ -20,6 +20,7 @@ def to_hex(value):
     if isinstance(value, int):
         return value
 
+
 def convert_args(args):
     args = args or {}
     for k,v in args.items():
@@ -41,7 +42,6 @@ class Tendermint(object):
         except ValueError as e:
             print('Error parsing response: {}'.format(e))
             return {'error': e.message}
-
     def status(self):
         return self.call('status')
 
@@ -56,6 +56,12 @@ class Tendermint(object):
 
     def broadcast_tx_commit(self,tx):
         return self.call('broadcast_tx_commit', {'tx': tx})
+
+    def broadcast_tx_sync(self,tx):
+	    return self.call('broadcast_tx_sync', {'tx': tx})
+
+    def tx_search(self, query, prove, page, per_page):
+        return self.call('tx_search', {'query': query, 'prove': prove, 'page': page, 'per_page': per_page})
 
     def blockchain(self,min, max):
         return self.call('blockchain', {'minHeight':min,'maxHeight':max})
